@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.Scanner;
 
@@ -9,7 +10,6 @@ public class Java_Notes_Manager {
         try {
             // 1. Create JavaFile1.txt
             FileWriter writer1 = new FileWriter("JavaFile1.txt");
-            System.out.println("Enter content for JavaFile1.txt:");
             String content1 = "Java is an object-oriented programming language.\n"
                     + "It supports encapsulation, inheritance, and polymorphism.\n"
                     + "File handling in Java allows for efficient reading and searching of text.\n"
@@ -30,7 +30,6 @@ public class Java_Notes_Manager {
 
             // 3. Create JavaFile2.txt
             FileWriter writer2 = new FileWriter("JavaFile2.txt");
-            System.out.println("Enter first line for JavaFile2.txt:");
             String content2 = "This is the first line in this JavaFile2.txt file.\n";
             writer2.write(content2);
             writer2.close();
@@ -60,17 +59,15 @@ public class Java_Notes_Manager {
                 lineNumber++;
                 charCount += line.length();
                 lineCount++;
-                String[] words = line.split("\\s+");
-                wordCount += words.length;
+                String[] lineWords = line.split("\\s+");
+                wordCount += lineWords.length;
 
-                if (line.toLowerCase().contains(wordToFind.toLowerCase())) {
-                    System.out.println("Word \"" + wordToFind + "\" found at line number: " + lineNumber);
-                    // count occurrences in this line
-                    String[] lineWords = line.split("\\s+");
-                    for (String word : lineWords) {
-                        if (word.equalsIgnoreCase(wordToFind)) {
-                            polymorphismCount++;
-                        }
+                for (String word : lineWords) {
+                    // Remove punctuation from each word before comparing
+                    word = word.replaceAll("[^a-zA-Z]", "");
+                    if (word.equalsIgnoreCase(wordToFind)) {
+                        polymorphismCount++;
+                        System.out.println("Word \"" + wordToFind + "\" found at line number: " + lineNumber);
                     }
                 }
             }
