@@ -1,6 +1,6 @@
 # Let's create the README.md content and save it to a file.
 
-readme_content = """\
+
 # 📓 Java Notes Manager
 
 ![Java Logo](https://www.vectorlogo.zone/logos/java/java-ar21.svg)
