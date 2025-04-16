@@ -1,0 +1,5 @@
+This is the first line in this JavaFile2.txt file.
+Java is an object-oriented programming language.
+It supports encapsulation, inheritance, and polymorphism.
+File handling in Java allows for efficient reading and searching of text.
+Keep learning and mastering Java!
