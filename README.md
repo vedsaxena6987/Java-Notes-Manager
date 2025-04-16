@@ -1,4 +1,4 @@
-# Let's create the README.md content and save it to a file.
+
 
 
 # 📓 Java Notes Manager
