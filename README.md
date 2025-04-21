@@ -69,7 +69,7 @@ Welcome to the **Java Notes Manager** — a simple yet powerful console-based Ja
 
 1. 📥 Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/JavaNotesManager.git
+   git clone https://github.com/vedsaxena6987/Java-Notes-Manager
    ```
    ```bash
    javac Java_Notes_Manager.java
